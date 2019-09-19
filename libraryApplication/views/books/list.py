@@ -38,7 +38,7 @@ def book_list(request):
 
                 all_books.append(book)
 
-# this tells it which data we're wanting to give to the template
+        # this tells it which data we're wanting to give to the template
         template = 'books/list.html'
         context = {
             'all_books': all_books
