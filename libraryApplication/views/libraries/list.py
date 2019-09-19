@@ -1,6 +1,6 @@
 import sqlite3
 from django.shortcuts import render
-from libraryApplication.models import Book
+from libraryApplication.models import Library
 from ..connection import Connection
 
 
@@ -22,10 +22,10 @@ def library_list(request):
             dataset = db_cursor.fetchall()
 
             for row in dataset:
-                library = library()
+                library = Library()
                 library.id = row['id']
                 library.title = row['title']
-                library.location = row['location']
+                library.address = row['address']
 
                 all_libraries.append(library)
 
